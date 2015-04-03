@@ -278,7 +278,7 @@ int go_start){
                                 memcpy(block_entry->name,name_file,strlen(name_file));
                                 block_entry->rec_len = 1024 - begin;
                                 block_entry->name_len = strlen(name_file);
-                                block_entry->file_type = SYMBOLIC_LINK;
+                                block_entry->file_type = EXT2_FT_SYMLINK;
                                 block_entry->inode = go_start;
                                 memcpy(start+(block_num *1024)+begin,block_entry,len+block_entry->name_len);
                         //      return 0;
